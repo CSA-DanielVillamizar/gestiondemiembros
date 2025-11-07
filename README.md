@@ -6,6 +6,7 @@
 [![Backend Deploy](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/deploy-backend.yml/badge.svg)](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/deploy-backend.yml)
 [![Frontend Deploy](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/deploy-frontend.yml/badge.svg)](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/deploy-frontend.yml)
 [![codecov](https://codecov.io/gh/CSA-DanielVillamizar/gestiondemiembros/branch/main/graph/badge.svg)](https://codecov.io/gh/CSA-DanielVillamizar/gestiondemiembros)
+[![GitHub Discussions](https://img.shields.io/github/discussions/CSA-DanielVillamizar/gestiondemiembros?logo=github&color=purple)](https://github.com/CSA-DanielVillamizar/gestiondemiembros/discussions)
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript)](https://www.typescriptlang.org/)

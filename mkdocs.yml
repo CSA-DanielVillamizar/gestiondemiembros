@@ -27,7 +27,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Cambiar a modo claro
-  
+
   features:
     - navigation.instant
     - navigation.tracking
@@ -39,7 +39,7 @@ theme:
     - search.highlight
     - content.code.copy
     - content.code.annotate
-  
+
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil

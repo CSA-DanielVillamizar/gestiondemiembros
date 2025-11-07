@@ -1,5 +1,11 @@
 # 💬 Guía para Habilitar GitHub Discussions
 
+> ✅ **Estado**: GitHub Discussions está **HABILITADO** en este repositorio.
+> 
+> 📋 **Guía rápida**: Ver `DISCUSSION_TEMPLATES/category-setup-guide.md` para configurar categorías en 3 minutos.
+> 
+> 📝 **Plantilla de bienvenida**: Ver `DISCUSSION_TEMPLATES/welcome.md` para la primera discusión.
+
 Esta guía explica cómo habilitar y configurar GitHub Discussions para tu repositorio.
 
 ## ¿Qué son GitHub Discussions?

@@ -33,7 +33,7 @@ jobs:
     name: Build and Deploy Frontend
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
@@ -111,7 +111,7 @@ jobs:
     name: Close Pull Request Job
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 🗑️ Remove staging deployment
         uses: Azure/static-web-apps-deploy@v1

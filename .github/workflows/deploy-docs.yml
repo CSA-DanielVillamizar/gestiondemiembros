@@ -23,7 +23,7 @@ jobs:
   build:
     name: Build Documentation
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
@@ -55,7 +55,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+
     steps:
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
