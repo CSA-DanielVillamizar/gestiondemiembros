@@ -78,44 +78,44 @@ Write-Host "Quieres configurar los pasos opcionales? (S/N): " -ForegroundColor C
 $doOptional = Read-Host
 
 if ($doOptional -eq "S" -or $doOptional -eq "s") {
-    
+
     # BRANCH PROTECTION
     Write-Host "`n----------------------------------------------------------------" -ForegroundColor Green
     Write-Host "OPCIONAL: Branch Protection (3 min)" -ForegroundColor Green
     Write-Host "----------------------------------------------------------------`n" -ForegroundColor Green
-    
+
     Write-Host "Abriendo configuracion de Branches..." -ForegroundColor Cyan
     Start-Process "https://github.com/CSA-DanielVillamizar/gestiondemiembros/settings/branches"
     Start-Sleep -Seconds 1
-    
+
     Write-Host "Abriendo guia en VS Code..." -ForegroundColor Cyan
     Start-Process "code" -ArgumentList ".github\BRANCH_PROTECTION.md"
-    
+
     Write-Host "`nQue hacer:" -ForegroundColor White
     Write-Host "1. Click 'Add branch protection rule'" -ForegroundColor Gray
     Write-Host "2. Branch name pattern: main" -ForegroundColor Gray
     Write-Host "3. Habilita las opciones segun la guia`n" -ForegroundColor Gray
-    
+
     Write-Host "Presiona ENTER cuando termines..." -ForegroundColor Cyan
     Read-Host
-    
+
     # CODECOV
     Write-Host "`n----------------------------------------------------------------" -ForegroundColor Green
     Write-Host "OPCIONAL: Codecov (2 min)" -ForegroundColor Green
     Write-Host "----------------------------------------------------------------`n" -ForegroundColor Green
-    
+
     Write-Host "Abriendo Codecov..." -ForegroundColor Cyan
     Start-Process "https://codecov.io/gh/CSA-DanielVillamizar/gestiondemiembros"
     Start-Sleep -Seconds 2
-    
+
     Write-Host "Abriendo GitHub Secrets..." -ForegroundColor Cyan
     Start-Process "https://github.com/CSA-DanielVillamizar/gestiondemiembros/settings/secrets/actions"
-    
+
     Write-Host "`nQue hacer:" -ForegroundColor White
     Write-Host "1. En Codecov, autoriza el repositorio" -ForegroundColor Gray
     Write-Host "2. Copia el token" -ForegroundColor Gray
     Write-Host "3. En GitHub Secrets, crea 'CODECOV_TOKEN'`n" -ForegroundColor Gray
-    
+
     Write-Host "Presiona ENTER cuando termines..." -ForegroundColor Cyan
     Read-Host
 }

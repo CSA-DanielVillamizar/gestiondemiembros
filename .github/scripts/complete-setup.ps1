@@ -98,7 +98,7 @@ $response = Read-Host
 if ($response -eq "S" -or $response -eq "s") {
     $completed += "GitHub Pages"
     Write-Host "✅ Paso 2 completado`n" -ForegroundColor Green
-    
+
     Write-Host "🚀 ¿Quieres ejecutar el deploy de documentación ahora? (S/N): " -ForegroundColor Cyan -NoNewline
     $deploy = Read-Host
     if ($deploy -eq "S" -or $deploy -eq "s") {
@@ -128,10 +128,10 @@ if ($response -eq "S" -or $response -eq "s") {
     Write-Host "`n🌐 Abriendo configuración de Branches..." -ForegroundColor Cyan
     Start-Process "https://github.com/CSA-DanielVillamizar/gestiondemiembros/settings/branches"
     Start-Sleep -Seconds 1
-    
+
     Write-Host "📄 Abriendo guía en VS Code..." -ForegroundColor Cyan
     Start-Process "code" -ArgumentList ".github/BRANCH_PROTECTION.md"
-    
+
     Write-Host "`n📋 INSTRUCCIONES:" -ForegroundColor White
     Write-Host "1. Click 'Add branch protection rule'" -ForegroundColor Gray
     Write-Host "2. Branch name pattern: main" -ForegroundColor Gray
@@ -143,7 +143,7 @@ if ($response -eq "S" -or $response -eq "s") {
     Write-Host "      - CodeQL" -ForegroundColor DarkGray
     Write-Host "   ✅ Require conversation resolution before merging" -ForegroundColor DarkGray
     Write-Host "4. Click 'Create'`n" -ForegroundColor Gray
-    
+
     Write-Host "❓ ¿Completaste este paso? (S/N): " -ForegroundColor Cyan -NoNewline
     $response2 = Read-Host
     if ($response2 -eq "S" -or $response2 -eq "s") {
@@ -168,10 +168,10 @@ if ($response -eq "S" -or $response -eq "s") {
     Write-Host "`n🌐 Abriendo Codecov..." -ForegroundColor Cyan
     Start-Process "https://codecov.io/gh/CSA-DanielVillamizar/gestiondemiembros"
     Start-Sleep -Seconds 2
-    
+
     Write-Host "🌐 Abriendo GitHub Secrets..." -ForegroundColor Cyan
     Start-Process "https://github.com/CSA-DanielVillamizar/gestiondemiembros/settings/secrets/actions"
-    
+
     Write-Host "`n📋 INSTRUCCIONES:" -ForegroundColor White
     Write-Host "1. En Codecov, autoriza el repositorio" -ForegroundColor Gray
     Write-Host "2. Copia el 'Repository Upload Token'" -ForegroundColor Gray
@@ -180,7 +180,7 @@ if ($response -eq "S" -or $response -eq "s") {
     Write-Host "   - Name: CODECOV_TOKEN" -ForegroundColor DarkGray
     Write-Host "   - Value: [pega el token de Codecov]" -ForegroundColor DarkGray
     Write-Host "   - Click 'Add secret'`n" -ForegroundColor DarkGray
-    
+
     Write-Host "❓ ¿Completaste este paso? (S/N): " -ForegroundColor Cyan -NoNewline
     $response2 = Read-Host
     if ($response2 -eq "S" -or $response2 -eq "s") {
