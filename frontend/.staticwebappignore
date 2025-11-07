@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Development files
+src/
+.env.development
+.env.local
+*.log
+
+# Build artifacts
+.vite/
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
