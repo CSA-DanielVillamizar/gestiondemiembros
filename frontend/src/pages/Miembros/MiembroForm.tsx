@@ -22,6 +22,7 @@ import {
   ArrowBack as ArrowBackIcon
 } from '@mui/icons-material';
 import { httpClient } from '../../services/httpClient';
+import { Miembro } from '../../types/api';
 
 interface MiembroFormData {
   numeroIdentificacion: string;
@@ -87,7 +88,7 @@ function MiembroForm() {
     try {
       setLoading(true);
       setError(null);
-      const response = await httpClient.get(`/Miembros/${miembroId}`);
+      const response = await httpClient.get<Miembro>(`/Miembros/${miembroId}`);
       const miembro = response.data;
       
       setFormData({

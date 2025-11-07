@@ -99,7 +99,7 @@ function MiembroDetail() {
     try {
       setLoading(true);
       setError(null);
-      const response = await httpClient.get(`/Miembros/${miembroId}`);
+      const response = await httpClient.get<Miembro>(`/Miembros/${miembroId}`);
       setMiembro(response.data);
     } catch (err: any) {
       console.error('Error al cargar miembro:', err);
