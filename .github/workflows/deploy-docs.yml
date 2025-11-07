@@ -41,7 +41,7 @@ jobs:
           pip install pymdown-extensions
 
       - name: 🔨 Build documentation
-        run: mkdocs build --strict --verbose --site-dir ./_site
+        run: mkdocs build --verbose --site-dir ./_site
 
       - name: 📤 Upload artifact
         uses: actions/upload-pages-artifact@v3

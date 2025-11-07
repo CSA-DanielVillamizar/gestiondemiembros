@@ -81,26 +81,6 @@ nav:
     - Inicio Rápido: guides/quickstart.md
     - Instalación: guides/instalacion.md
     - Docker: guides/docker.md
-  - Arquitectura:
-    - Visión General: architecture/overview.md
-    - Backend: architecture/backend.md
-    - Frontend: architecture/frontend.md
-    - Base de Datos: architecture/database.md
-  - Deployment:
-    - Azure: deployment/azure.md
-    - Docker Compose: deployment/docker-compose.md
-  - DevOps:
-    - CI/CD: devops/cicd.md
-    - Secretos: devops/secrets.md
-    - Branch Protection: devops/branch-protection.md
-  - Contribución:
-    - Guía de Contribución: contributing/guide.md
-    - Código de Conducta: contributing/code-of-conduct.md
-    - Seguridad: contributing/security.md
-  - API:
-    - Miembros: api/miembros.md
-    - Comités: api/comites.md
-    - Autenticación: api/auth.md
 
 extra:
   social:
