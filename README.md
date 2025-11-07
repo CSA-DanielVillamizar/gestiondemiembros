@@ -179,7 +179,15 @@ VITE_DEV_MODE=true
 
 Este script inicia backend y frontend automáticamente.
 
-### Opción 2: Manual
+### Opción 2: Docker Compose (Recomendado)
+
+```bash
+docker-compose up --build
+```
+
+Esto inicia **todo el stack** (SQL Server + Backend + Frontend) en contenedores. Ver [DOCKER.md](DOCKER.md) para más detalles.
+
+### Opción 3: Manual
 
 **Terminal 1 — Backend:**
 
@@ -198,8 +206,9 @@ npm run dev
 ### URLs de acceso
 
 - **Frontend:** http://localhost:3000
-- **API Backend:** http://localhost:5001
+- **API Backend:** http://localhost:5001 (o 5000 con Docker)
 - **Swagger UI:** http://localhost:5001/swagger
+- **Health Check:** http://localhost:5001/health
 
 ---
 
@@ -271,7 +280,10 @@ Ver guía completa: [docs/DESPLIEGUE_AZURE.md](docs/DESPLIEGUE_AZURE.md)
 ## 📚 Documentación Adicional
 
 - **[QUICKSTART.md](QUICKSTART.md)** — Inicio rápido en < 10 minutos
+- **[DOCKER.md](DOCKER.md)** — Guía completa de Docker y Docker Compose
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — Guía para contribuidores
+- **[SECURITY.md](SECURITY.md)** — Política de seguridad y reporte de vulnerabilidades
+- **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** — Código de conducta del proyecto
 - **[CHANGELOG.md](CHANGELOG.md)** — Historial de versiones
 - **[docs/INSTALACION.md](docs/INSTALACION.md)** — Instalación detallada
 - **[docs/ARQUITECTURA.md](docs/ARQUITECTURA.md)** — Documentación de arquitectura

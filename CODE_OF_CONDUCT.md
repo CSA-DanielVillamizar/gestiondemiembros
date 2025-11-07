@@ -36,7 +36,11 @@ Este código de conducta aplica tanto a espacios del proyecto como a espacios p�
 
 ## ⚖️ Aplicación
 
-Instancias de comportamiento abusivo, acosador o inaceptable pueden ser reportadas a los líderes de la comunidad responsables del cumplimiento a través de [INSERT CONTACT METHOD]. Todas las quejas serán evaluadas e investigadas de una manera puntual y justa.
+Instancias de comportamiento abusivo, acosador o inaceptable pueden ser reportadas a los líderes de la comunidad responsables del cumplimiento a través de:
+- Email: [daniel.villamizar@lamamedellin.org](mailto:daniel.villamizar@lamamedellin.org)
+- GitHub: [@CSA-DanielVillamizar](https://github.com/CSA-DanielVillamizar)
+
+Todas las quejas serán evaluadas e investigadas de una manera puntual y justa.
 
 Todos los líderes de la comunidad están obligados a respetar la privacidad y la seguridad de quienes reporten incidentes.
 

@@ -19,8 +19,8 @@ La seguridad de L.A.M.A. Medellín es una prioridad. Si descubres una vulnerabil
 
 En su lugar:
 
-1. **Envía un email a**: [security@example.com](mailto:security@example.com)
-   - O contacta al mantenedor principal vía mensaje privado de GitHub
+1. **Envía un email a**: [daniel.villamizar@lamamedellin.org](mailto:daniel.villamizar@lamamedellin.org)
+   - O contacta a [@CSA-DanielVillamizar](https://github.com/CSA-DanielVillamizar) vía mensaje privado de GitHub
 
 2. **Incluye en tu reporte**:
    - Descripción de la vulnerabilidad
