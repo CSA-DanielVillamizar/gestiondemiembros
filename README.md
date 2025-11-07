@@ -23,19 +23,19 @@ Sistema web para gestionar miembros del capítulo L.A.M.A. Medellín, con fronte
 
 ## 📑 Tabla de Contenidos
 
-- [Características](#características)
-- [Arquitectura](#arquitectura)
-- [Tecnologías](#tecnologías)
-- [Prerequisitos](#prerequisitos)
-- [Instalación](#instalación)
-- [Configuración](#configuración)
-- [Ejecución](#ejecución)
-- [Uso](#uso)
-- [Base de Datos](#base-de-datos)
-- [Despliegue](#despliegue)
-- [Documentación Adicional](#documentación-adicional)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
+- [🎯 Características](#-características)
+- [🏗️ Arquitectura](#️-arquitectura)
+- [🚀 Tecnologías](#-tecnologías)
+- [📦 Prerequisitos](#-prerequisitos)
+- [⚙️ Instalación](#️-instalación)
+- [🔧 Configuración](#-configuración)
+- [▶️ Ejecución](#️-ejecución)
+- [📱 Uso](#-uso)
+- [🗄️ Base de Datos](#️-base-de-datos)
+- [🚢 Despliegue](#-despliegue)
+- [📚 Documentación Adicional](#-documentación-adicional)
+- [🤝 Contribución](#-contribución)
+- [📄 Licencia](#-licencia)
 
 ---
 
