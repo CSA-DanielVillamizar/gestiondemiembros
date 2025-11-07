@@ -30,7 +30,8 @@ import {
   Person as PersonIcon,
   LinkedIn as LinkedInIcon
 } from '@mui/icons-material';
-import { httpClient } from '../../services/httpClient';
+import httpClient from '../../api/httpClient';
+import { Miembro } from '../../types/api';
 
 interface Miembro {
   id: string;
@@ -99,7 +100,7 @@ function MiembroDetail() {
     try {
       setLoading(true);
       setError(null);
-      const response = await httpClient.get(`/Miembros/${miembroId}`);
+      const response = await httpClient.get<Miembro>(`/Miembros/${miembroId}`);
       setMiembro(response.data);
     } catch (err: any) {
       console.error('Error al cargar miembro:', err);
