@@ -1,0 +1,58 @@
+# Archivos a ignorar en Git
+
+## Backend
+**/bin/
+**/obj/
+**/publish/
+**/.vs/
+**/*.user
+**/*.suo
+**/*.userosscache
+**/*.sln.docstates
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/*.log
+**/logs/
+
+## Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Azure
+*.pubxml
+*.publishsettings
+PublishProfiles/
+
+# Sensitive data
+*.pfx
+*.p12
+*.key
+*.pem
+secrets.json
+
+.fake

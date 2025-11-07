@@ -1,0 +1,9 @@
+{
+  "name": "tsconfig.json",
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuild.json"
+  },
+  "include": ["vite.config.ts"]
+}

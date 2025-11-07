@@ -1,0 +1,359 @@
+<mxfile host="app.diagrams.net" modified="2025-11-06T00:00:00.000Z" agent="DrawIO" version="22.1.0">
+  <diagram name="Arquitectura Azure - L.A.M.A. Medellín" id="azure-architecture">
+    <mxGraphModel dx="1800" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Título Principal -->
+        <mxCell id="main-title" value="L.A.M.A. MEDELLÍN - ARQUITECTURA EN AZURE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontStyle=1;fontColor=#0078D4;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="1000" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Subtítulo -->
+        <mxCell id="subtitle" value="Sistema de Gestión de Miembros - Clean Architecture + Azure Cloud" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="200" y="70" width="1000" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- ZONA DE USUARIOS (INTERNET) -->
+        <!-- ============================================ -->
+        <mxCell id="internet-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F4FD;strokeColor=#0078D4;strokeWidth=2;verticalAlign=top;fontSize=14;fontStyle=1;dashed=1;dashPattern=5 5" vertex="1" parent="1">
+          <mxGeometry x="80" y="130" width="1240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="internet-label" value="🌐 USUARIOS / INTERNET" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0078D4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="140" width="250" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Usuario Web -->
+        <mxCell id="user-web" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="200" y="190" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="user-web-label" value="Usuario Web&lt;br&gt;(Navegador)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="180" y="255" width="100" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Usuario Móvil -->
+        <mxCell id="user-mobile" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.mobile_client;" vertex="1" parent="1">
+          <mxGeometry x="350" y="190" width="45" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="user-mobile-label" value="Usuario Móvil&lt;br&gt;(Futuro)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#666666;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="322.5" y="255" width="100" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Administrador -->
+        <mxCell id="admin-user" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#DD344C;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="500" y="190" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-label" value="Administrador&lt;br&gt;(L.A.M.A.)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#DD344C;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="480" y="255" width="100" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- AZURE ACTIVE DIRECTORY B2C -->
+        <!-- ============================================ -->
+        <mxCell id="azure-ad-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4E6;strokeColor=#FFA500;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="900" y="150" width="380" height="110" as="geometry" />
+        </mxCell>
+        
+        <!-- Icono Azure AD B2C -->
+        <mxCell id="azure-ad-icon" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Azure_AD_B2C.svg;" vertex="1" parent="1">
+          <mxGeometry x="930" y="170" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-ad-title" value="Azure Active Directory B2C" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#0078D4;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="175" width="250" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-ad-desc" value="• Autenticación de usuarios&lt;br&gt;• Single Sign-On (SSO)&lt;br&gt;• Emisión de JWT Tokens" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="200" width="250" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Flechas de Autenticación -->
+        <mxCell id="arrow-user-ad" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#FFA500;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="user-web" target="azure-ad-icon">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-user-ad-label" value="🔐 Login / OAuth 2.0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FFA500;fontStyle=1;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="arrow-user-ad">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="20" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- CAPA DE PRESENTACIÓN - FRONTEND -->
+        <!-- ============================================ -->
+        <mxCell id="frontend-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#0078D4;strokeWidth=3;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="600" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend-title" value="📱 CAPA DE PRESENTACIÓN" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0078D4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="330" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Static Web Apps -->
+        <mxCell id="azure-swa-icon" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/Static_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="120" y="380" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-swa-title" value="Azure Static Web Apps" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="385" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-swa-tech" value="React 18.3 + TypeScript 5.3&lt;br&gt;Material-UI 5.15 + Vite 5.4" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="210" y="408" width="200" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- CDN -->
+        <mxCell id="azure-cdn-icon" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/CDN_Profiles.svg;" vertex="1" parent="1">
+          <mxGeometry x="430" y="380" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-cdn-label" value="Azure CDN&lt;br&gt;(Content Delivery)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="419" y="453" width="90" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Componentes React -->
+        <mxCell id="react-components" value="Componentes:&lt;br&gt;• Dashboard (Estadísticas)&lt;br&gt;• MiembrosList (Tabla + Filtros)&lt;br&gt;• MiembroForm (CRUD)&lt;br&gt;• MiembroDetail (Vista)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0078D4;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="465" width="280" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Librerías -->
+        <mxCell id="libraries" value="📚 Axios • React Router • MSAL.js" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DEEBF7;strokeColor=#0078D4;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="495" width="230" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- CAPA DE APLICACIÓN - BACKEND -->
+        <!-- ============================================ -->
+        <mxCell id="backend-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=3;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="320" width="600" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="backend-title" value="⚙️ CAPA DE APLICACIÓN" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="740" y="330" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Azure App Service -->
+        <mxCell id="azure-app-service-icon" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="760" y="380" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-app-service-title" value="Azure App Service" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="385" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-app-service-tech" value="ASP.NET Core 8.0 Web API&lt;br&gt;Entity Framework Core 8.0" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="840" y="408" width="200" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- API Management (Opcional) -->
+        <mxCell id="azure-apim-icon" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/API_Management_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="380" width="65" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-apim-label" value="API Management&lt;br&gt;(Opcional)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1047.5" y="445" width="90" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Clean Architecture -->
+        <mxCell id="clean-arch" value="🏗️ Clean Architecture:&lt;br&gt;Controllers → Services → Repositories → Domain" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4CAF50;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="760" y="465" width="320" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- API Endpoints -->
+        <mxCell id="api-endpoints" value="REST API: /api/Miembros • /api/Estadisticas • /api/Comites" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#4CAF50;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="495" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Flecha Frontend -> Backend -->
+        <mxCell id="arrow-frontend-backend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#0078D4;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="react-components" target="azure-app-service-icon">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="495" as="sourcePoint" />
+            <mxPoint x="760" y="412" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-fe-be-label" value="HTTPS / REST API&lt;br&gt;JSON + JWT Token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#0078D4;fontStyle=1;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="arrow-frontend-backend">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="10" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- CAPA DE DATOS -->
+        <!-- ============================================ -->
+        <mxCell id="data-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#D32F2F;strokeWidth=3;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="580" width="600" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="data-title" value="💾 CAPA DE DATOS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#C62828;" vertex="1" parent="1">
+          <mxGeometry x="100" y="590" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Azure SQL Database -->
+        <mxCell id="azure-sql-icon" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/SQL_Database.svg;" vertex="1" parent="1">
+          <mxGeometry x="140" y="640" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-sql-title" value="Azure SQL Database" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="650" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-sql-desc" value="• SQL Server en la nube&lt;br&gt;• Alta disponibilidad&lt;br&gt;• Backups automáticos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="230" y="670" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Tablas -->
+        <mxCell id="tables-box" value="📊 Tablas:&lt;br&gt;• Miembros&lt;br&gt;• Comites&lt;br&gt;• MiembrosComites&lt;br&gt;• AspNetUsers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D32F2F;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="420" y="640" width="140" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Backup -->
+        <mxCell id="azure-backup-icon" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/other/Azure_Backup_Center.svg;" vertex="1" parent="1">
+          <mxGeometry x="140" y="725" width="54" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-backup-label" value="Azure Backup" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="200" y="730" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Flecha Backend -> Database -->
+        <mxCell id="arrow-backend-db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#D32F2F;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="clean-arch" target="azure-sql-icon">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="530" as="sourcePoint" />
+            <mxPoint x="174" y="630" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="920" y="550" />
+              <mxPoint x="580" y="550" />
+              <mxPoint x="580" y="610" />
+              <mxPoint x="174" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-be-db-label" value="Entity Framework Core&lt;br&gt;Code First + Migrations" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#D32F2F;fontStyle=1;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="arrow-backend-db">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="-90" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- MONITOREO Y OBSERVABILIDAD -->
+        <!-- ============================================ -->
+        <mxCell id="monitoring-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;strokeWidth=2;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="580" width="600" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="monitoring-title" value="📊 MONITOREO Y OBSERVABILIDAD" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="740" y="590" width="350" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Application Insights -->
+        <mxCell id="azure-appinsights-icon" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/monitor/Application_Insights.svg;" vertex="1" parent="1">
+          <mxGeometry x="760" y="640" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-appinsights-label" value="Application Insights&lt;br&gt;(Telemetría + Logs)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="742" y="710" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Monitor -->
+        <mxCell id="azure-monitor-icon" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/monitor/Monitor.svg;" vertex="1" parent="1">
+          <mxGeometry x="900" y="640" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-monitor-label" value="Azure Monitor&lt;br&gt;(Métricas + Alertas)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="879" y="710" width="110" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Log Analytics -->
+        <mxCell id="azure-logs-icon" value="" style="image=img/lib/azure2/monitor/Log_Analytics_Workspaces.svg;aspect=fixed;html=1;points=[];align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="640" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-logs-label" value="Log Analytics&lt;br&gt;(Consultas KQL)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1022" y="710" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Key Vault -->
+        <mxCell id="azure-keyvault-icon" value="" style="image=img/lib/azure2/security/Key_Vaults.svg;aspect=fixed;html=1;points=[];align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="640" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-keyvault-label" value="Key Vault&lt;br&gt;(Secretos)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1169" y="710" width="90" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- CI/CD PIPELINE -->
+        <!-- ============================================ -->
+        <mxCell id="cicd-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="820" width="1240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cicd-title" value="🚀 CI/CD PIPELINE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#6A1B9A;" vertex="1" parent="1">
+          <mxGeometry x="100" y="830" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- GitHub -->
+        <mxCell id="github-icon" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github" vertex="1" parent="1">
+          <mxGeometry x="140" y="870" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="github-label" value="GitHub&lt;br&gt;Repository" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="935" width="80" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- GitHub Actions -->
+        <mxCell id="github-actions-icon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.generic_database;" vertex="1" parent="1">
+          <mxGeometry x="300" y="875" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="github-actions-label" value="GitHub Actions&lt;br&gt;(CI/CD)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="275" y="935" width="100" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Azure DevOps -->
+        <mxCell id="azure-devops-icon" value="" style="image=img/lib/azure2/devops/Azure_DevOps.svg;aspect=fixed;html=1;points=[];align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="870" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-devops-label" value="Azure DevOps&lt;br&gt;(Opcional)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="442" y="935" width="100" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Deployment Steps -->
+        <mxCell id="deploy-steps" value="Pipeline: Build → Test → Deploy&lt;br&gt;✓ Frontend: npm build → SWA deploy&lt;br&gt;✓ Backend: dotnet publish → App Service deploy&lt;br&gt;✓ Database: EF Migrations → Azure SQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7B1FA2;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="620" y="870" width="680" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Flechas CI/CD -->
+        <mxCell id="arrow-github-actions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#7B1FA2;" edge="1" parent="1" source="github-icon" target="github-actions-icon">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-actions-azure" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#7B1FA2;" edge="1" parent="1" source="github-actions-icon" target="deploy-steps">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- NOTAS Y LEYENDA -->
+        <!-- ============================================ -->
+        <mxCell id="notes-title" value="📝 NOTAS TÉCNICAS:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="960" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="notes-content" value="• Arquitectura escalable y modular basada en Clean Architecture&lt;br&gt;• Autenticación segura con Azure AD B2C + JWT&lt;br&gt;• Despliegue automatizado con GitHub Actions&lt;br&gt;• Monitoreo en tiempo real con Application Insights&lt;br&gt;• Alta disponibilidad con Azure App Service + SQL Database&lt;br&gt;• CDN global para rendimiento óptimo del frontend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="985" width="450" height="95" as="geometry" />
+        </mxCell>
+
+        <!-- Stack Tecnológico -->
+        <mxCell id="stack-title" value="🛠️ STACK TECNOLÓGICO:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="960" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="stack-frontend" value="Frontend: React 18.3, TypeScript 5.3, Material-UI 5.15, Vite 5.4" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="600" y="985" width="350" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="stack-backend" value="Backend: ASP.NET Core 8.0, C# 12, Entity Framework Core 8.0" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1000" width="350" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="stack-database" value="Database: Azure SQL Database, SQL Server 2022" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1015" width="350" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="stack-auth" value="Auth: Azure AD B2C, MSAL.js, JWT Tokens" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1030" width="350" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="stack-cicd" value="CI/CD: GitHub Actions, Azure DevOps (opcional)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1045" width="350" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="stack-monitor" value="Monitoring: Application Insights, Azure Monitor, Log Analytics" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1060" width="350" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Footer -->
+        <mxCell id="footer" value="L.A.M.A. Medellín | Sistema de Gestión de Miembros | Versión 1.0 | Noviembre 2025" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1000" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Logo Azure -->
+        <mxCell id="azure-logo" value="Powered by Microsoft Azure" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#0078D4;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1030" width="200" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
