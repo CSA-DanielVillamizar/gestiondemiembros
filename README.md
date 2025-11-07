@@ -1,10 +1,15 @@
 ﻿# 🏛️ L.A.M.A. Medellín — Sistema de Gestión de Miembros
 
+[![Backend CI](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/backend-ci.yml)
+[![Frontend CI](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/frontend-ci.yml)
+[![CodeQL](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/CSA-DanielVillamizar/gestiondemiembros/actions/workflows/codeql-analysis.yml)
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript)](https://www.typescriptlang.org/)
 [![Material-UI](https://img.shields.io/badge/MUI-5.15-007FFF?logo=mui)](https://mui.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)](docker-compose.yml)
+[![Code of Conduct](https://img.shields.io/badge/Code%20of-Conduct-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 Sistema web para gestionar miembros del capítulo L.A.M.A. Medellín, con frontend en React + TypeScript y backend en ASP.NET Core 8 siguiendo principios de Clean Architecture.
 

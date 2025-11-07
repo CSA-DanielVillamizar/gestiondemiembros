@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentación
+    url: https://github.com/CSA-DanielVillamizar/gestiondemiembros/blob/main/README.md
+    about: Consulta la documentación completa del proyecto
+  - name: 💬 Discusiones
+    url: https://github.com/CSA-DanielVillamizar/gestiondemiembros/discussions
+    about: Únete a las discusiones de la comunidad
