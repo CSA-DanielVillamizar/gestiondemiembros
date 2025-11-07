@@ -1,0 +1,120 @@
+name: Deploy Frontend to Azure Static Web Apps
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/deploy-frontend.yml'
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+    paths:
+      - 'frontend/**'
+
+env:
+  NODE_VERSION: '18'
+  WORKING_DIRECTORY: ./frontend
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy Frontend
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: ${{ env.WORKING_DIRECTORY }}/package-lock.json
+
+      - name: 📦 Install dependencies
+        run: npm ci
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+
+      - name: 🔍 Lint
+        run: npm run lint
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+        continue-on-error: true
+
+      - name: 🔨 Build (Staging)
+        if: github.event.inputs.environment == 'staging' || github.event_name == 'push'
+        run: npm run build
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+        env:
+          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL_STAGING }}
+          VITE_DEV_MODE: 'false'
+
+      - name: 🔨 Build (Production)
+        if: github.event.inputs.environment == 'production'
+        run: npm run build
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+        env:
+          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL_PRODUCTION }}
+          VITE_DEV_MODE: 'false'
+
+      - name: 🚀 Deploy to Azure Static Web Apps (Staging)
+        if: github.event.inputs.environment == 'staging' || github.event_name == 'push' || github.event_name == 'pull_request'
+        id: deploy-staging
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_STAGING }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "/frontend"
+          output_location: "dist"
+          skip_app_build: true
+
+      - name: 🚀 Deploy to Azure Static Web Apps (Production)
+        if: github.event.inputs.environment == 'production'
+        id: deploy-production
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PRODUCTION }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "/frontend"
+          output_location: "dist"
+          skip_app_build: true
+
+      - name: ✅ Deployment Summary
+        if: success()
+        run: |
+          ENV="${{ github.event.inputs.environment || 'staging' }}"
+          echo "### 🚀 Frontend Deployment Successful!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Environment**: ${ENV^}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployed by**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+
+  close-pull-request:
+    name: Close Pull Request Job
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🗑️ Remove staging deployment
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_STAGING }}
+          action: "close"

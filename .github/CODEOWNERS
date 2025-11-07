@@ -1,0 +1,41 @@
+# CODEOWNERS
+# Documentación: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Propietarios por defecto para todo el repositorio
+* @CSA-DanielVillamizar
+
+# Backend - .NET/C#
+backend/** @CSA-DanielVillamizar
+*.cs @CSA-DanielVillamizar
+*.csproj @CSA-DanielVillamizar
+
+# Frontend - React/TypeScript
+frontend/** @CSA-DanielVillamizar
+*.tsx @CSA-DanielVillamizar
+*.ts @CSA-DanielVillamizar
+*.jsx @CSA-DanielVillamizar
+*.js @CSA-DanielVillamizar
+
+# Infrastructure
+docker-compose.yml @CSA-DanielVillamizar
+Dockerfile @CSA-DanielVillamizar
+.dockerignore @CSA-DanielVillamizar
+
+# CI/CD
+.github/workflows/** @CSA-DanielVillamizar
+*.yml @CSA-DanielVillamizar
+*.yaml @CSA-DanielVillamizar
+
+# Documentation
+*.md @CSA-DanielVillamizar
+docs/** @CSA-DanielVillamizar
+
+# Configuration
+*.json @CSA-DanielVillamizar
+.editorconfig @CSA-DanielVillamizar
+.gitignore @CSA-DanielVillamizar
+
+# Security & Conduct
+SECURITY.md @CSA-DanielVillamizar
+CODE_OF_CONDUCT.md @CSA-DanielVillamizar
+LICENSE @CSA-DanielVillamizar

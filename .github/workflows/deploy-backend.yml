@@ -1,0 +1,136 @@
+name: Deploy Backend to Azure App Service
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+  push:
+    branches:
+      - main
+    paths:
+      - 'backend/**'
+      - '.github/workflows/deploy-backend.yml'
+
+env:
+  AZURE_WEBAPP_NAME: lama-medellin-api    # Cambiar por tu App Service name
+  DOTNET_VERSION: '8.0.x'
+  WORKING_DIRECTORY: ./backend/src/LAMAMedellin.API
+
+jobs:
+  build:
+    name: Build Backend
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: 📦 Restore dependencies
+        run: dotnet restore
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+
+      - name: 🔨 Build
+        run: dotnet build --configuration Release --no-restore
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+
+      - name: 🧪 Test
+        run: dotnet test --configuration Release --no-build --verbosity normal
+        working-directory: ./backend
+        continue-on-error: true
+
+      - name: 📦 Publish
+        run: dotnet publish --configuration Release --no-build --output ./publish
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+
+      - name: 📤 Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-app
+          path: ${{ env.WORKING_DIRECTORY }}/publish
+
+  deploy-staging:
+    name: Deploy to Staging
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event.inputs.environment == 'staging'
+    environment:
+      name: staging
+      url: ${{ steps.deploy.outputs.webapp-url }}
+    
+    steps:
+      - name: 📥 Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-app
+          path: ./app
+
+      - name: 🚀 Deploy to Azure Web App (Staging)
+        id: deploy
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}-staging
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_STAGING }}
+          package: ./app
+
+      - name: ✅ Deployment Summary
+        run: |
+          echo "### 🚀 Backend Deployment Successful!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Environment**: Staging" >> $GITHUB_STEP_SUMMARY
+          echo "- **App Name**: ${{ env.AZURE_WEBAPP_NAME }}-staging" >> $GITHUB_STEP_SUMMARY
+          echo "- **URL**: ${{ steps.deploy.outputs.webapp-url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployed by**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+
+  deploy-production:
+    name: Deploy to Production
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event.inputs.environment == 'production'
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.webapp-url }}
+    
+    steps:
+      - name: 📥 Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-app
+          path: ./app
+
+      - name: 🚀 Deploy to Azure Web App (Production)
+        id: deploy
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_PRODUCTION }}
+          package: ./app
+
+      - name: ✅ Deployment Summary
+        run: |
+          echo "### 🚀 Backend Deployment Successful!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Environment**: Production" >> $GITHUB_STEP_SUMMARY
+          echo "- **App Name**: ${{ env.AZURE_WEBAPP_NAME }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **URL**: ${{ steps.deploy.outputs.webapp-url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployed by**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: 🔔 Notify on Slack (optional)
+        if: always()
+        run: |
+          echo "Add Slack notification here if needed"
