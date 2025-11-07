@@ -30,8 +30,7 @@ import {
   Person as PersonIcon,
   LinkedIn as LinkedInIcon
 } from '@mui/icons-material';
-import httpClient from '../../api/httpClient';
-import { Miembro } from '../../types/api';
+import { httpClient } from '../../services/httpClient';
 
 interface Miembro {
   id: string;
