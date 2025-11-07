@@ -1,0 +1,56 @@
+🎉 ¡Bienvenidos a las Discusiones del Proyecto!
+
+¡Hola a todos! 👋
+
+Estamos emocionados de abrir este espacio de discusiones para que la comunidad de **L.A.M.A. Medellín** pueda:
+
+## 💬 ¿Qué puedes hacer aquí?
+
+- **💡 Proponer ideas**: ¿Tienes una idea para mejorar el sistema? ¡Compártela en Ideas!
+- **❓ Hacer preguntas**: ¿Dudas técnicas? ¿Problemas de instalación? Usa Q&A
+- **🔧 Resolver problemas**: Si tienes problemas específicos, visita Troubleshooting
+- **🎨 Mostrar tu trabajo**: ¿Has personalizado el sistema? ¡Muéstralo en Show and Tell!
+- **📢 Mantenerse informado**: Sigue Announcements para las últimas actualizaciones
+
+## 📋 Categorías Disponibles
+
+| Categoría | Uso |
+|-----------|-----|
+| 📢 **Announcements** | Noticias oficiales y actualizaciones del proyecto |
+| 💡 **Ideas** | Propuestas de nuevas características y mejoras |
+| ❓ **Q&A** | Preguntas y respuestas técnicas |
+| 💬 **General** | Conversación general sobre el proyecto |
+| 🎨 **Show and Tell** | Comparte lo que has creado con este proyecto |
+| 🔧 **Troubleshooting** | Ayuda para resolver problemas específicos |
+
+## 🤝 Código de Conducta
+
+Recuerda que este espacio está regido por nuestro [Código de Conducta](https://github.com/CSA-DanielVillamizar/gestiondemiembros/blob/main/CODE_OF_CONDUCT.md). Seamos respetuosos y constructivos.
+
+## 🚀 Enlaces Útiles
+
+- **[Documentación](https://github.com/CSA-DanielVillamizar/gestiondemiembros/blob/main/README.md)**: Guía completa del proyecto
+- **[Guía de Instalación](https://github.com/CSA-DanielVillamizar/gestiondemiembros/blob/main/INSTALACION.md)**: Cómo configurar el sistema
+- **[Quickstart](https://github.com/CSA-DanielVillamizar/gestiondemiembros/blob/main/QUICKSTART.md)**: Inicio rápido en 10 minutos
+- **[Contribuir](https://github.com/CSA-DanielVillamizar/gestiondemiembros/blob/main/CONTRIBUTING.md)**: Cómo contribuir al proyecto
+- **[Issues](https://github.com/CSA-DanielVillamizar/gestiondemiembros/issues)**: Reporta bugs o solicita características
+
+## 💬 FAQ Inicial
+
+### ¿Cómo reporto un bug?
+Los bugs se reportan en [Issues](https://github.com/CSA-DanielVillamizar/gestiondemiembros/issues/new/choose), no en Discussions. Usa la plantilla de "Bug Report".
+
+### ¿Puedo proponer cambios al código?
+¡Sí! Lee nuestra [Guía de Contribución](https://github.com/CSA-DanielVillamizar/gestiondemiembros/blob/main/CONTRIBUTING.md) y envía un Pull Request.
+
+### ¿Dónde pregunto sobre el uso del sistema?
+En la categoría **Q&A** - la comunidad te ayudará.
+
+### ¿Cómo sugiero una nueva característica?
+Puedes abrir una discusión en **Ideas** o un Issue con la plantilla "Feature Request".
+
+---
+
+**¡Gracias por ser parte de esta comunidad!** 🙌
+
+*El equipo de L.A.M.A. Medellín*
