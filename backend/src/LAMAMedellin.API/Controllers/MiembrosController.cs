@@ -100,7 +100,11 @@ namespace LAMAMedellin.API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al buscar miembros con término: {SearchTerm}", searchTerm);
+                // Sanitizar el término de búsqueda para prevenir log forging
+                var sanitizedSearchTerm = searchTerm?.Replace(Environment.NewLine, "")
+                    .Replace("\n", "")
+                    .Replace("\r", "");
+                _logger.LogError(ex, "Error al buscar miembros con término: {SearchTerm}", sanitizedSearchTerm);
                 return StatusCode(500, "Error interno del servidor");
             }
         }
