@@ -68,10 +68,9 @@ if ($ghInstalled) {
         
         try {
             # Intentar crear/actualizar branch protection
-            $result = gh api repos/CSA-DanielVillamizar/gestiondemiembros/branches/main/protection `
+            $result = $protectionConfig | gh api repos/CSA-DanielVillamizar/gestiondemiembros/branches/main/protection `
                 --method PUT `
-                --input - `
-                <<< $protectionConfig 2>&1
+                --input - 2>&1
             
             if ($LASTEXITCODE -eq 0) {
                 Write-Host "`n================================================================" -ForegroundColor Green
