@@ -1,43 +1,41 @@
-# ✅ CHECKLIST COMPLETO - Pasos Manuales Pendientes
-# Ejecuta este script para abrir todas las páginas y seguir las instrucciones
+# CHECKLIST COMPLETO - Pasos Manuales Pendientes
+# Ejecuta este script para abrir todas las paginas y seguir las instrucciones
 
-Write-Host "`n╔════════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
-Write-Host "║                                                                ║" -ForegroundColor Cyan
-Write-Host "║        ✅ CHECKLIST INTERACTIVO - PASOS MANUALES ✅            ║" -ForegroundColor Cyan
-Write-Host "║                                                                ║" -ForegroundColor Cyan
-Write-Host "╚════════════════════════════════════════════════════════════════╝`n" -ForegroundColor Cyan
+Write-Host "`n================================================================" -ForegroundColor Cyan
+Write-Host "     CHECKLIST INTERACTIVO - PASOS MANUALES" -ForegroundColor Cyan
+Write-Host "================================================================`n" -ForegroundColor Cyan
 
 $completed = @()
 
 # ============================================================================
-# PASO 1: GITHUB DISCUSSIONS - CATEGORÍAS
+# PASO 1: GITHUB DISCUSSIONS - CATEGORIAS
 # ============================================================================
 
-Write-Host "╔════════════════════════════════════════════════════════════════╗" -ForegroundColor Yellow
-Write-Host "║  PASO 1.1: Crear Categorías en Discussions (2 min)            ║" -ForegroundColor Yellow
-Write-Host "╚════════════════════════════════════════════════════════════════╝`n" -ForegroundColor Yellow
+Write-Host "`n================================================================" -ForegroundColor Yellow
+Write-Host "  PASO 1.1: Crear Categorias en Discussions (2 min)" -ForegroundColor Yellow
+Write-Host "================================================================`n" -ForegroundColor Yellow
 
-Write-Host "🌐 Abriendo página de Discussions..." -ForegroundColor Cyan
+Write-Host "Abriendo pagina de Discussions..." -ForegroundColor Cyan
 Start-Process "https://github.com/CSA-DanielVillamizar/gestiondemiembros/discussions"
 Start-Sleep -Seconds 2
 
-Write-Host "`n📋 INSTRUCCIONES:" -ForegroundColor White
-Write-Host "1. Click en ⚙️ 'Manage categories' (esquina superior derecha)" -ForegroundColor Gray
-Write-Host "2. Crea estas 6 categorías:" -ForegroundColor Gray
-Write-Host "`n   📢 Announcements (Tipo: Announcement)" -ForegroundColor Magenta
-Write-Host "      Descripción: Noticias oficiales y actualizaciones del proyecto`n" -ForegroundColor DarkGray
-Write-Host "   💡 Ideas (Tipo: Open-ended discussion)" -ForegroundColor Magenta
-Write-Host "      Descripción: Propuestas de nuevas características y mejoras`n" -ForegroundColor DarkGray
-Write-Host "   ❓ Q&A (Tipo: Question / Answer)" -ForegroundColor Magenta
-Write-Host "      Descripción: Preguntas técnicas sobre instalación y desarrollo`n" -ForegroundColor DarkGray
-Write-Host "   💬 General (Tipo: Open-ended discussion)" -ForegroundColor Magenta
-Write-Host "      Descripción: Conversación general sobre el proyecto`n" -ForegroundColor DarkGray
-Write-Host "   🎨 Show and Tell (Tipo: Open-ended discussion)" -ForegroundColor Magenta
-Write-Host "      Descripción: Comparte proyectos y personalizaciones`n" -ForegroundColor DarkGray
-Write-Host "   🔧 Troubleshooting (Tipo: Question / Answer)" -ForegroundColor Magenta
-Write-Host "      Descripción: Ayuda para resolver problemas específicos`n" -ForegroundColor DarkGray
+Write-Host "`nINSTRUCCIONES:" -ForegroundColor White
+Write-Host "1. Click en 'Manage categories' (esquina superior derecha)" -ForegroundColor Gray
+Write-Host "2. Crea estas 6 categorias:" -ForegroundColor Gray
+Write-Host "`n   Announcements (Tipo: Announcement)" -ForegroundColor Magenta
+Write-Host "      Descripcion: Noticias oficiales y actualizaciones del proyecto`n" -ForegroundColor DarkGray
+Write-Host "   Ideas (Tipo: Open-ended discussion)" -ForegroundColor Magenta
+Write-Host "      Descripcion: Propuestas de nuevas caracteristicas y mejoras`n" -ForegroundColor DarkGray
+Write-Host "   QA (Tipo: Question / Answer)" -ForegroundColor Magenta
+Write-Host "      Descripcion: Preguntas tecnicas sobre instalacion y desarrollo`n" -ForegroundColor DarkGray
+Write-Host "   General (Tipo: Open-ended discussion)" -ForegroundColor Magenta
+Write-Host "      Descripcion: Conversacion general sobre el proyecto`n" -ForegroundColor DarkGray
+Write-Host "   Show and Tell (Tipo: Open-ended discussion)" -ForegroundColor Magenta
+Write-Host "      Descripcion: Comparte proyectos y personalizaciones`n" -ForegroundColor DarkGray
+Write-Host "   Troubleshooting (Tipo: Question / Answer)" -ForegroundColor Magenta
+Write-Host "      Descripcion: Ayuda para resolver problemas especificos`n" -ForegroundColor DarkGray
 
-Write-Host "❓ ¿Completaste este paso? (S/N): " -ForegroundColor Cyan -NoNewline
+Write-Host "Completaste este paso? (S/N): " -ForegroundColor Cyan -NoNewline
 $response = Read-Host
 if ($response -eq "S" -or $response -eq "s") {
     $completed += "Discussions - Categorías"
