@@ -1,8 +1,23 @@
 # ✅ Azure Deployment Setup - COMPLETADO
 
-## 📋 Recursos Creados
+## � Suscripción de Azure Utilizada
+
+**⚠️ IMPORTANTE**: Este proyecto utiliza la siguiente suscripción:
+
+- **Nombre**: `Argus`
+- **Subscription ID**: `f4adbcf7-c2db-48ba-8165-3217f77ef8c7`
+- **Estado**: Enabled
+- **Región**: East US
+
+Para verificar tu suscripción:
+```powershell
+az account show
+```
+
+## �📋 Recursos Creados
 
 ### Resource Group
+
 - **Nombre**: `lama-medellin-rg`
 - **Región**: East US
 

@@ -34,7 +34,7 @@ $secrets = @{}
 if ($EnvironmentType -eq "staging" -or $EnvironmentType -eq "both") {
     Write-Host "   → Backend Staging Publish Profile..." -ForegroundColor White
     $profile = az webapp deployment list-publishing-profiles --name "lama-medellin-api-staging" --resource-group $ResourceGroup --xml 2>&1
-    
+
     if ($LASTEXITCODE -eq 0) {
         $secrets["AZURE_WEBAPP_PUBLISH_PROFILE_STAGING"] = $profile
         Write-Host "   ✓ Obtenido" -ForegroundColor Green
@@ -46,7 +46,7 @@ if ($EnvironmentType -eq "staging" -or $EnvironmentType -eq "both") {
 if ($EnvironmentType -eq "production" -or $EnvironmentType -eq "both") {
     Write-Host "   → Backend Production Publish Profile..." -ForegroundColor White
     $profile = az webapp deployment list-publishing-profiles --name "lama-medellin-api" --resource-group $ResourceGroup --xml 2>&1
-    
+
     if ($LASTEXITCODE -eq 0) {
         $secrets["AZURE_WEBAPP_PUBLISH_PROFILE_PRODUCTION"] = $profile
         Write-Host "   ✓ Obtenido" -ForegroundColor Green
@@ -59,7 +59,7 @@ if ($EnvironmentType -eq "production" -or $EnvironmentType -eq "both") {
 if ($EnvironmentType -eq "staging" -or $EnvironmentType -eq "both") {
     Write-Host "   → Frontend Staging API Token..." -ForegroundColor White
     $token = az staticwebapp secrets list --name "lama-medellin-frontend-staging" --resource-group $ResourceGroup --query "properties.apiKey" -o tsv 2>&1
-    
+
     if ($LASTEXITCODE -eq 0) {
         $secrets["AZURE_STATIC_WEB_APPS_API_TOKEN_STAGING"] = $token
         Write-Host "   ✓ Obtenido" -ForegroundColor Green
@@ -71,7 +71,7 @@ if ($EnvironmentType -eq "staging" -or $EnvironmentType -eq "both") {
 if ($EnvironmentType -eq "production" -or $EnvironmentType -eq "both") {
     Write-Host "   → Frontend Production API Token..." -ForegroundColor White
     $token = az staticwebapp secrets list --name "lama-medellin-frontend" --resource-group $ResourceGroup --query "properties.apiKey" -o tsv 2>&1
-    
+
     if ($LASTEXITCODE -eq 0) {
         $secrets["AZURE_STATIC_WEB_APPS_API_TOKEN_PRODUCTION"] = $token
         Write-Host "   ✓ Obtenido" -ForegroundColor Green
@@ -84,7 +84,7 @@ if ($EnvironmentType -eq "production" -or $EnvironmentType -eq "both") {
 if ($EnvironmentType -eq "staging" -or $EnvironmentType -eq "both") {
     Write-Host "   → Backend Staging URL..." -ForegroundColor White
     $url = az webapp show --name "lama-medellin-api-staging" --resource-group $ResourceGroup --query "defaultHostName" -o tsv 2>&1
-    
+
     if ($LASTEXITCODE -eq 0) {
         $secrets["VITE_API_BASE_URL_STAGING"] = "https://$url/api"
         Write-Host "   ✓ URL: https://$url/api" -ForegroundColor Green
@@ -96,7 +96,7 @@ if ($EnvironmentType -eq "staging" -or $EnvironmentType -eq "both") {
 if ($EnvironmentType -eq "production" -or $EnvironmentType -eq "both") {
     Write-Host "   → Backend Production URL..." -ForegroundColor White
     $url = az webapp show --name "lama-medellin-api" --resource-group $ResourceGroup --query "defaultHostName" -o tsv 2>&1
-    
+
     if ($LASTEXITCODE -eq 0) {
         $secrets["VITE_API_BASE_URL_PRODUCTION"] = "https://$url/api"
         Write-Host "   ✓ URL: https://$url/api" -ForegroundColor Green
@@ -115,14 +115,14 @@ $failCount = 0
 
 foreach ($secretName in $secrets.Keys) {
     Write-Host "   → Configurando $secretName..." -ForegroundColor White
-    
+
     # Guardar en archivo temporal
     $secretFile = Join-Path $tempDir "$secretName.txt"
     $secrets[$secretName] | Out-File -FilePath $secretFile -NoNewline -Encoding utf8
-    
+
     # Configurar en GitHub
     $result = Get-Content $secretFile | gh secret set $secretName 2>&1
-    
+
     if ($LASTEXITCODE -eq 0) {
         Write-Host "   ✓ Configurado" -ForegroundColor Green
         $successCount++
@@ -130,7 +130,7 @@ foreach ($secretName in $secrets.Keys) {
         Write-Host "   ✗ Error: $result" -ForegroundColor Red
         $failCount++
     }
-    
+
     # Eliminar archivo temporal
     Remove-Item $secretFile -Force
 }

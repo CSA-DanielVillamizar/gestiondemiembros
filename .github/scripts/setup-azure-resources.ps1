@@ -61,7 +61,7 @@ Write-Host ""
 # Función para crear App Service
 function Create-AppService {
     param($Name, $Runtime)
-    
+
     $exists = az webapp show --name $Name --resource-group $ResourceGroup 2>&1
     if ($LASTEXITCODE -eq 0) {
         Write-Host "   ℹ App Service ya existe: $Name" -ForegroundColor Yellow
@@ -69,7 +69,7 @@ function Create-AppService {
     } else {
         Write-Host "   → Creando App Service: $Name..." -ForegroundColor White
         az webapp create --name $Name --resource-group $ResourceGroup --plan $planName --runtime $Runtime --output none
-        
+
         if ($LASTEXITCODE -eq 0) {
             Write-Host "   ✓ App Service creado: $Name" -ForegroundColor Green
             return $true
@@ -97,7 +97,7 @@ Write-Host ""
 # Función para crear Static Web App
 function Create-StaticWebApp {
     param($Name)
-    
+
     $exists = az staticwebapp show --name $Name --resource-group $ResourceGroup 2>&1
     if ($LASTEXITCODE -eq 0) {
         Write-Host "   ℹ Static Web App ya existe: $Name" -ForegroundColor Yellow
@@ -105,7 +105,7 @@ function Create-StaticWebApp {
     } else {
         Write-Host "   → Creando Static Web App: $Name..." -ForegroundColor White
         az staticwebapp create --name $Name --resource-group $ResourceGroup --location "eastus2" --output none
-        
+
         if ($LASTEXITCODE -eq 0) {
             Write-Host "   ✓ Static Web App creada: $Name" -ForegroundColor Green
             return $true

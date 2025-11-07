@@ -1,4 +1,8 @@
 # Script simplificado de configuración de Azure
+# Suscripción utilizada: Argus (f4adbcf7-c2db-48ba-8165-3217f77ef8c7)
+# Región: East US
+# Creado: 2025-11-07
+
 param(
     [string]$RG = "lama-medellin-rg",
     [string]$Location = "eastus",
